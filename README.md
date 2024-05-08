@@ -1,4 +1,4 @@
-# FULL_ADDER_SUBTRACTOR
+![319864573-8e5b103f-a3dc-45a0-9616-8a77ef17164f](https://github.com/naavaneetha/FULL_ADDER_SUBTRACTOR/assets/144870472/e5d5c685-8c37-4aa5-9442-d8f888be412b)![319864545-6f2b23ec-1c13-4697-89cb-670c4d8b57b7](https://github.com/naavaneetha/FULL_ADDER_SUBTRACTOR/assets/144870472/406e095b-781c-4c63-b677-4a80d99e5621)# FULL_ADDER_SUBTRACTOR
 
 Implementation-of-Full-Adder-and-Full-subtractor-circuit
 
@@ -43,17 +43,39 @@ Borrow out = A'Bin + A'B + BBin
 Write the detailed procedure here
 
 **Program:**
+```
+module ex4(a,b,c,sum,carry,BO,DIFF);
+input a,b,c;
+output sum,carry,BO,DIFF;
+//Write syntax for full adder sum and carry in date flow modelling 
+wire a0;
+not (a0,a);
+assign sum=a^b^c;
+assign carry=(a&b)|(b&c)|(c&a);
+//Write syntax for full subtractor Borrow and Difference in date flow modelling
+assign DIFF=a^b^c;
+assign Bbar=(~a&b)|(b&c)|(~a&c);
+endmodule
+```
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. 
+Developed by:**AKSHAYAA M T**
+RegisterNumber:**212223110002**
 */
 
 **RTL Schematic**
+![319864545-6f2b23ec-1c13-4697-89cb-670c4d8b57b7](https://github.com/naavaneetha/FULL_ADDER_SUBTRACTOR/assets/144870472/ffac0f68-1f20-4800-92f8-19454811ee9f)
 
 **Output Timing Waveform**
+![319864573-8e5b103f-a3dc-45a0-9616-8a77ef17164f](https://github.com/naavaneetha/FULL_ADDER_SUBTRACTOR/assets/144870472/f3d78151-9c7c-4a3a-9ed2-bf19fa6728c9)
+
+
 
 **Result:**
 
 Thus the Full Adder and Full Subtractor circuits are designed and the truth tables is verified using Quartus software.
+
+
 
 
 
